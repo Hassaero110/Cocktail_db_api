@@ -35,7 +35,8 @@ def test_get_drinks_from_ingredients(test_ingredients, expected):
 
     drinks_database = mock_drinks_api()
 
-    drinks = get_drinks_from_ingredients(test_ingredients, drinks_database)
+    list_drinks = get_drinks_from_ingredients(test_ingredients, drinks_database)
+    drinks = [drink["name"] for drink in list_drinks]
 
     assert sorted(drinks) == sorted(expected)
 
