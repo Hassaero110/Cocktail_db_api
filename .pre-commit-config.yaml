@@ -1,0 +1,23 @@
+repos:
+- repo: https://github.com/pre-commit/mirrors-isort
+  rev: v5.9.3
+  hooks:
+  - id: isort
+- repo: https://github.com/ambv/black
+  rev: 22.3.0
+  hooks:
+  - id: black-jupyter # black with jupyter support
+    language_version: python3.10
+- repo: https://github.com/PyCQA/flake8
+  rev: 3.9.2
+  hooks:
+  - id: flake8
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.5.0
+  hooks:
+  - id: nbstripout
+- repo: https://github.com/crate-ci/typos
+  rev: v1.3.9
+  hooks:
+    - id: typos
+      args: ["--exclude=['*.ipynb'] "] # without this line typos will overwrite the changes automatically
