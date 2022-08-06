@@ -1,1 +1,2 @@
 # Required libraries
+pytest==7.1.2
