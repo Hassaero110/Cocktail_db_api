@@ -26,8 +26,6 @@ if __name__ == "__main__":
     drinks_database = create_drinks_database(possible_drinks)
 
     # Get all drinks that can be made from the available ingredients
-    #allowed_drinks = get_drinks_from_ingredients(available_ingredients, drinks_database)
     print_drinks_from_ingredients(available_ingredients, drinks_database, True)
 
-    # Print the allowed drinks
-    #  print(allowed_drinks)
+
