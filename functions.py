@@ -6,7 +6,7 @@ from api_call_functions import (
 
 def get_drinks_from_ingredients(available_ingredients, drinks_database):
     """
-    Returns a list of drinks that can be made from the given ingredients.
+    Returns a list of drinks that can be made from the given ingredients
     """
     list_of_drinks = []
 
@@ -20,6 +20,9 @@ def get_drinks_from_ingredients(available_ingredients, drinks_database):
     return list_of_drinks
 
 def print_drinks_from_ingredients(available_ingredients, drinks_database, extra_info=False):
+            """
+            Prints out all drinks that can be made with `available ingredients`
+            """
 
             list_drinks = get_drinks_from_ingredients(available_ingredients, drinks_database)
 
@@ -40,13 +43,16 @@ def get_possible_drinks(available_ingredients):
     possible_drinks = []
 
     for available_ingredient in available_ingredients:
-        print("Searching for drinks containing: " + available_ingredient)
         possible_drinks += get_all_drinks_containing_ingredient(available_ingredient)
 
     return set(possible_drinks)
 
 
 def create_drinks_database(drinks_list):
+    """
+    Returns a list of drinks with name, ingredients and
+    instructions for each drink as a dictionary
+    """
 
     drinks_database = []
 
